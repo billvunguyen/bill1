@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Le Coq</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/script.js"></script>
+</head>
+<body>
+    <div id="header">
+        
+        <ul>
+            <li><a href="home">HOME</a></li>
+            <li><a href="lich">LỊCH THI ĐẤU</a></li>
+            <li><a href="ketQua">KẾT QUẢ</a></li>
+            <li><a href="highlight">HIGHLIGHT</a></li>
+            <li><a href="bangXepHang">BẢNG XẾP HẠNG</a></li>
+          </ul>          
+    </div>
+    <div id="content" class="container">
+        <div id="post">
+            <table id="select_league">
+                <tr class="league">
+                    <select id="league_selected" onchange="ChangeSchedule()" onblur="HightLight(this, 2)" onmouseover="HightLight(this, 3)" onmouseout="HightLight(this, 1)">
+                        <option id="slc" value="pl"selected>English Premier League</option>
+                        <option id="slc_sll" value="ll">Spaniard La Liga</option>
+                    </select>
+                </tr>
+            </table>
+            <div class="ld" id="ld1">
+                <table class="ld1_show">
+                    <tr class=" detail">
+                        <td class="league_name" colspan="5"><img id="epl_logo" src="/images/new-premier-league-19-20-sleeve-badges (2).jpg" alt="epl logo 2019">English Premier League</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h1">Liverpool</td><td class="score">-</td><td class="Away" id="a1">Norwich</td><td class="date">10/8<td class="time"> 02:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h2">West Ham United</td><td class="score">-</td><td class="Away" id="a2">Manchester City</td><td class="date">10/8<td class="time"> 18:30</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h3">Crystal Palace</td><td class="score">-</td><td class="Away" id="a3">Everton</td><td class="date">10/8<td class="time"> 21:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h4">Watford</td><td class="score">-</td><td class="Away" id="a4">Brighton</td><td class="date">10/8<td class="time"> 21:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h5">Burnley</td><td class="score">-</td><td class="Away" id="a5">Southampton</td><td class="date">10/8<td class="time"> 21:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h6">Bournemouth</td><td class="score">-</td><td class="Away" id="a6">Sheffied United</td><td class="date">10/8<td class="time"> 21:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h7">Tottenham Hospur</td><td class="score">-</td><td class="Away" id="a7">Aston Villa</td><td class="date">10/8<td class="time"> 23:30</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h8">Leicester</td><td class="score">-</td><td class="Away" id="a8">Wolvehamton</td><td class="date">11/8<td class="time"> 20:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h9">Newcastle</td><td class="score">-</td><td class="Away" id="a9">Arsenal</td><td class="date">11/8<td class="time"> 20:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h10">Manchester United</td><td class="score">-</td><td class="Away" id="a10">Chelsea</td><td class="date">11/8<td class="time"> 22:30</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ld" id="ld2">
+                <table class="ld2_hidden">
+                    <tr class=" detail">
+                        <td class="league_name" colspan="5"><img id="sll_logo" src="img/laliga-santander-h-16-9.jpg" alt="la liga logo">La Liga</td>
+                    </tr>
+                    <div id="sll_round_show">
+                    <tr class="detail">
+                        <td class="Home" id="h1">Athletic Bilbao</td><td class="score">-</td><td class="Away" id="a1">Barcalona C.F</td><td class="date">17/8<td class="time"> 02:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h2">Celta Vigo</td><td class="score">-</td><td class="Away" id="a2">Real Madrid C.F</td><td class="date">17/8<td class="time"> 22:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h3">Valencia C.F</td><td class="score">-</td><td class="Away" id="a3">Real Sociedad</td><td class="date">18/8<td class="time"> 00:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h4">Leganés</td><td class="score">-</td><td class="Away" id="a4">Osasuna</td><td class="date">18/8<td class="time"> 02:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h5">Villarreal</td><td class="score">-</td><td class="Away" id="a5">Granada</td><td class="date">18/8<td class="time"> 02:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h6">Alavés</td><td class="score">-</td><td class="Away" id="a6">Levante</td><td class="date">18/8<td class="time"> 22:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h7">Espanõl</td><td class="score">-</td><td class="Away" id="a7">Sevilla</td><td class="date">19/8<td class="time"> 00:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h8">Athlético Madrid</td><td class="score">-</td><td class="Away" id="a8">Getafe</td><td class="date">19/8<td class="time"> 02:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h9">Mallorca</td><td class="score">-</td><td class="Away" id="a9">Eibar</td><td class="date">20/8<td class="time"> 01:00</td>
+                    </tr>
+                    <tr class="detail">
+                        <td class="Home" id="h10">Real Betis</td><td class="score">-</td><td class="Away" id="a10">Valladolid</td><td class="date">20/8<td class="time"> 02:00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <h2>Tin nóng</h2>
+            <div id="tin">
+            <p><a href="tin1">SỐC! Lộ hình ảnh mới nhất của Bruno Fernandes gây ngỡ ngàng cho MU</a></p><br> 
+            <hr><br> 
+            <p><a href="tin2">Juventus chốt giá khủng bán Dybala</a></p> <br> 
+            <hr><br> 
+            <p> <a href="tin3"> Sếp lớn ra tay, 2 tân binh sắp ra mắt Arsenal</a></p><br> 
+            <hr><br> 
+            <p><a href="tin4">"Gareth Bale sắp được chào đón tại đây"</a></p> <br>
+            <hr><br> 
+            <p> <a href="tin5">Ed Woodward sắp có thêm 2 tân binh</a></p> <br>         
+            </div>
+        </div>
+
+
+
+      <div id="footer">Design abc</div>
+    </div>
+    <div id="adv">
+        &copy; Web development - 17VP - FIT - HCMUS - 2019
+    </div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Le Coq</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="/javascripts/script2.js"></script>
+</head>
+<style>
+
+.addtext{
+    margin:50px;
+    margin-left:300px;
+}
+
+.sub{
+font-size:45px;
+margin : 10px;
+margin-left:430px;
+border-radius: 25px;
+border: 5px solid #FF1493;
+font-family: 'Satisfy', cursive;
+
+
+}
+
+#textbox{
+    text-align: center;
+    border: 5px solid #FF1493;
+}
+
+</style>
+<body>
+    <div id="header">
+          </ul>          
+    </div>
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Viết bài</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a><span><p>Or go <a href="/">home</a>.</p></span>
+    </div>
+    <form action="/dangBai" method="post">
+        <div class="addtext">
+            <textarea class="textbox" rows="40" cols="150" required="Xin mời nhập bài viết" placeholder="Viết bài ỏ đây" name="data1" ></textarea></br>
+            <button type="submit" class ="sub">Đăng Bài</button>
+        </div>
+    </form>
+</body>
+</html>

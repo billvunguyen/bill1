@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Le Coq</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/script.js"></script>
+</head>
+
+<body>
+    <div id="header">
+
+        <ul>
+            <li><a href="home">HOME</a></li>
+            <li><a href="lich">LỊCH THI ĐẤU</a></li>
+            <li><a href="ketQua">KẾT QUẢ</a></li>
+            <li><a href="highlight">HIGHLIGHT</a></li>
+            <li><a href="bangXepHang">BẢNG XẾP HẠNG</a></li>
+        </ul>
+    </div>
+    <div id="content" class="container">
+        <div id="post">
+            <h3>Bảng xếp hạng</h3>
+            <select id="lc_bxh" onchange="ChangeSTD()" onblur="HightLight(this, 2)" onmouseover="HightLight(this, 3)" onmouseout="HightLight(this, 1)">
+                <option value="epl">English Premier Leaue</option>
+                <option value="sll">Spaniard La Liga</option>
+            </select>
+            <div id="std_epl_show">
+            <table id="std_epl" class="std">
+                <tr>
+                    <th>Hạng</th>
+                    <th>CLB</th>
+                    <th>Đã đá</th>
+                    <th>Bàn thắng</th>
+                    <th>Bàn thua</th>
+                    <th>Hiệu số</th>
+                    <th>Điểm</th>
+                </tr>
+                <tr id="epl_clb_11" class="epl_clb">
+                    <td class="Ranking">1</td>
+                    <td class="club_name">Manchester City</td>
+                    <td class="played">1</td>
+                    <td class="goal">5</td>
+                    <td class="bt">0</td>
+                    <td class="hs">5</td>
+                    <td class="point">3</td>
+                </tr>
+                <tr id="epl_clb_12" class="epl_clb">
+                    <td class="Ranking">2</td>
+                    <td class="club_name">Manchester United</td>
+                    <td class="played">1</td>
+                    <td class="goal">4</td>
+                    <td class="bt">0</td>
+                    <td class="hs">4</td>
+                    <td class="point">3</td>
+                </tr>
+                <tr id="epl_clb_10" class="epl_clb">
+                    <td class="Ranking">3</td>
+                    <td class="club_name">Liverool</td>
+                    <td class="played">1</td>
+                    <td class="goal">4</td>
+                    <td class="bt">1</td>
+                    <td class="hs">3</td>
+                    <td class="point">3</td>
+                </tr>
+                <tr id="epl_clb_4" class="epl_clb">
+                    <td class="Ranking">4</td>
+                    <td class="club_name">Brighton Hover Albion</td>
+                    <td class="played">1</td>
+                    <td class="goal">3</td>
+                    <td class="bt">0</td>
+                    <td class="hs">3</td>
+                    <td class="point">3</td>
+                </tr>
+                <tr id="epl_clb_5" class="epl_clb">
+                    <td class="Ranking">5</td>
+                    <td class="club_name">Burnley</td>
+                    <td class="played">1</td>
+                    <td class="goal">3</td>
+                    <td class="bt">0</td>
+                    <td class="hs">3</td>
+                    <td class="point">3</td>
+                </tr>
+                <tr id="epl_clb_17" class="epl_clb">
+                    <td class="Ranking">6</td>
+                    <td class="club_name">Tottenham Hotspur</td>
+                    <td class="played">1</td>
+                    <td class="goal">3</td>
+                    <td class="bt">1</td>
+                    <td class="hs">2</td>
+                    <td class="point">3</td>
+                </tr> 
+                <tr id="epl_clb_2" class="epl_clb">
+                    <td class="Ranking">7</td>
+                    <td class="club_name">Arsenal</td>
+                    <td class="played">1</td>
+                    <td class="goal">1</td>
+                    <td class="bt">0</td>
+                    <td class="hs">1</td>
+                    <td class="point">3</td>    
+                </tr>
+                <tr id="ep_lclb_1" class="epl_clb">
+                    <td class="Ranking">8</td>
+                    <td class="club_name">AFC Bournemouth</td>
+                    <td class="played">1</td>
+                    <td class="goal">1</td>
+                    <td class="bt">1</td>
+                    <td class="hs">0</td>
+                    <td class="point">1</td>
+                </tr>
+                <tr id="epl_clb_15" class="epl_clb">
+                    <td class="Ranking">9</td>
+                    <td class="club_name">Sheffield United</td>
+                    <td class="played">1</td>
+                    <td class="goal">1</td>
+                    <td class="bt">1</td>
+                    <td class="hs">0</td>
+                    <td class="point">1</td>
+                </tr>
+                <tr id="epl_clb_7" class="epl_clb">
+                    <td class="Ranking">10</td>
+                    <td class="club_name">Crystal Palace</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">0</td>
+                    <td class="hs">0</td>
+                    <td class="point">1</td>
+                </tr>
+                <tr id="epl_clb_8" class="epl_clb">
+                    <td class="Ranking">11</td>
+                    <td class="club_name">Everton</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">0</td>
+                    <td class="hs">0</td>
+                    <td class="point">1</td>
+                </tr>
+                <tr id="epl_clb_9" class="epl_clb">
+                    <td class="Ranking">12</td>
+                    <td class="club_name">Leicester</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">0</td>
+                    <td class="hs">0</td>
+                    <td class="point">1</td>
+                </tr>
+                <tr id="epl_clb_20" class="epl_clb">
+                    <td class="Ranking">13</td>
+                    <td class="club_name">Wolvehampton</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">0</td>
+                    <td class="hs">0</td>
+                     <td class="point">1</td>
+                </tr>
+                <tr id="epl_clb_13" class="epl_clb">
+                    <td class="Ranking">14</td>
+                    <td class="club_name">Newcastle United</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">1</td>
+                    <td class="hs">-1</td>
+                    <td class="point">0</td>
+                </tr>
+                <tr id="epl_clb_3" class="epl_clb">
+                    <td class="Ranking">15</td>
+                    <td class="club_name">Aston Villa</td>
+                    <td class="played">1</td>
+                    <td class="goal">1</td>
+                    <td class="bt">3</td>
+                    <td class="hs">-2</td>
+                    <td class="point">0</td>
+                </tr>
+                <tr id="epl_clb_14" class="epl_clb">
+                    <td class="Ranking">16</td>
+                    <td class="club_name">Norwich</td>
+                    <td class="played">1</td>
+                    <td class="goal">1</td>
+                    <td class="bt">4</td>
+                    <td class="hs">-3</td>
+                    <td class="point">0</td>
+                </tr>
+                <tr id="epl_clb_16" class="epl_clb">
+                    <td class="Ranking">17</td>
+                    <td class="club_name">Southampton</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">3</td>
+                    <td class="hs">-3</td>
+                    <td class="point">0</td>
+                </tr>
+                <tr id="epl_clb_18" class="epl_clb">
+                    <td class="Ranking">18</td>
+                    <td class="club_name">Watford</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">3</td>
+                    <td class="hs">-3</td>
+                    <td class="point">0</td>
+                </tr>
+                <tr id="epl_clb_6" class="epl_clb">
+                    <td class="Ranking">19</td>
+                    <td class="club_name">Chelsea</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">4</td>
+                    <td class="hs">-4</td>
+                    <td class="point">0</td>
+                </tr>
+                <tr id="epl_clb_19" class="epl_clb">
+                    <td class="Ranking">20</td>
+                    <td class="club_name">West Ham United</td>
+                    <td class="played">1</td>
+                    <td class="goal">0</td>
+                    <td class="bt">5</td>
+                    <td class="hs">-5</td>
+                    <td class="point">0</td>
+                </tr>
+            </table>
+            </div>
+            <div id="std_sll_hidden">
+                <table id="std_sll" class="std">
+                    <tr>
+                        <th>Hạng</th>
+                        <th>CLB</th>
+                        <th>Đã đá</th>
+                        <th>Bàn thắng</th>
+                        <th>Bàn thua</th>
+                        <th>Hiệu số</th>
+                       <th>Điểm</th>
+                    </tr>
+                    <tr id="sll_clb_1" class="sll_clb">
+                        <td class="Ranking">1</td>
+                        <td class="club_name">Athletic Bilbao</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_2" class="sll_clb">
+                        <td class="Ranking">2</td>
+                        <td class="club_name">Atlético Madrid</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>    
+                    </tr>
+                    <tr id="sll_clb_3" class="sll_clb">
+                        <td class="Ranking">3</td>
+                        <td class="club_name">Barcelona</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_4" class="sll_clb">
+                        <td class="Ranking">4</td>
+                        <td class="club_name">Celta Vigo</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_5" class="sll_clb">
+                        <td class="Ranking">5</td>
+                        <td class="club_name">Alavés</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_6" class="sll_clb">
+                        <td class="Ranking">6</td>
+                        <td class="club_name">Eibar</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_7" class="sll_clb">
+                        <td class="Ranking">7</td>
+                        <td class="club_name">Espaynol</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_8" class="sll_clb">
+                        <td class="Ranking">8</td>
+                        <td class="club_name">Getafe</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_9" class="sll_clb">
+                        <td class="Ranking">9</td>
+                        <td class="club_name">Granada</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_10" class="sll_clb">
+                        <td class="Ranking">10</td>
+                        <td class="club_name">Léganes</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_11" class="sll_clb">
+                        <td class="Ranking">11</td>
+                        <td class="club_name">Levante</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_12" class="sll_clb">
+                        <td class="Ranking">12</td>
+                        <td class="club_name">Mallorca</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_13" class="sll_clb">
+                        <td class="Ranking">13</td>
+                        <td class="club_name">Osasuna</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_14" class="sll_clb">
+                        <td class="Ranking">14</td>
+                        <td class="club_name">Real Betis</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_15" class="sll_clb">
+                        <td class="Ranking">15</td>
+                        <td class="club_name">Real Madrid</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_16" class="sll_clb">
+                        <td class="Ranking">16</td>
+                        <td class="club_name">Real Sociedad</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_17" class="sll_clb">
+                        <td class="Ranking">17</td>
+                        <td class="club_name">Sevilla</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_18" class="sll_clb">
+                        <td class="Ranking">18</td>
+                        <td class="club_name">Valladolid</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_19" class="sll_clb">
+                        <td class="Ranking">19</td>
+                        <td class="club_name">Valencia</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                    <tr id="sll_clb_20" class="sll_clb">
+                        <td class="Ranking">20</td>
+                        <td class="club_name">Villareal</td>
+                        <td class="played">0</td>
+                        <td class="goal">0</td>
+                        <td class="bt">0</td>
+                        <td class="hs">0</td>
+                        <td class="point">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <div id="footer">Design by abc</div>
+    <div id="adv">
+        &copy; Web development - 17VP - FIT - HCMUS - 2019
+    </div>
+
+
+</body>
+
+</html>

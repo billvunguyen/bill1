@@ -1,0 +1,233 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#header {
+    background: #333;
+    margin: 0px;
+    padding: 41px;
+    height: 5px;
+}
+
+.container {
+    width: 1200px;
+    height: 1200px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+#post {
+    background: white;
+    width: 800px;
+    float: left;
+    height: 1000px;
+}
+
+#sidebar {
+    background: white;
+    width: 400px;
+    float: left;
+    height: 700px;
+    text-align: left;
+}
+
+#sidebar .tin {
+    font-size: 135%;
+    color: #000;
+    text-decoration: none;
+}
+
+#sidebar .tin:hover {
+    color: red;
+}
+
+#footer {
+    margin-bottom: 0px;
+    background-color: #000;
+    height: 45px;
+    clear: both;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+}
+
+#adv {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: black;
+    background-color: rgba(58, 191, 209, 0.5);
+    position: fixed;
+    bottom: 0;
+}
+
+ul {
+    align-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+img {
+    float: right;
+    position: relative;
+    margin: 0px 120px;
+    padding: 0px;
+    width: 88px;
+    height: 88x;
+}
+
+h2 {
+    color: red;
+    font-family: sans-serif;
+}
+
+.action img {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    margin-top: 22px;
+    margin-right: 77px;
+    margin-bottom: 10px;
+}
+
+.action a {
+    font: bold 40px sans-serif;
+    text-decoration: none;
+    margin: 10px 30px 10px 130px;
+    color: black;
+}
+
+.action p {
+    font: 17px arial;
+    text-decoration: none;
+    margin: 10px 30px 10px 138px;
+    color: black;
+}
+
+.action a:hover {
+    color: red;
+}
+
+.video {
+    text-align: center;
+    justify-content: center;
+}
+
+.onFocus {
+    background-color: #FCF;
+    color: #390;
+}
+
+.onMouseOver {
+    border-color: #C30;
+    border-width: thin;
+    border-style: solid;
+    background-color: #FFC;
+    color: #F00;
+}
+
+.normal {
+    border-color: #B4CFFE;
+    border-bottom-width: thin;
+    border-style: ridge;
+    background-color: #FFF;
+    color: #000;
+}
+
+
+/*Schedule*/
+
+#ld2 {
+    display: none;
+}
+
+
+/*Standing*/
+
+table {
+    margin: 2% 50% 0% 0%;
+    position: absolute;
+    font-size: 135%;
+    background-color: rgba(217, 245, 233, 0.89);
+    border-collapse: collapse;
+    width: 30%;
+    height: 70%;
+}
+
+#league_selected {
+    width: 30%;
+    height: 5%;
+    margin: 2% 0%;
+    padding: 2% 4%;
+    text-align: center;
+}
+
+#slc {
+    width: 30%;
+    height: 5%;
+    margin: 2% 0%;
+    padding: 2% 4%;
+    text-align: center;
+}
+
+.std th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#std_sll_hidden {
+    display: none;
+}
+
+.league_name {
+    font-size: 145%;
+    color: rgb(78, 81, 233);
+}
+
+.ld .ld1_show #epl_logo {
+    float: left;
+    margin-left: 2%;
+    width: 30%;
+    height: 10%;
+    margin-right: -5%;
+}
+
+.ld .ld2_hidden #sll_logo {
+    float: left;
+    margin-left: 2%;
+    width: 40%;
+    height: 40%;
+    margin-right: -5%
+}
+
+select {
+    width: -10%;
+    height: -50%;
+}
